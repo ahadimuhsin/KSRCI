@@ -1,0 +1,55 @@
+
+body{
+  margin:0;
+  padding:0;
+  color:#000;
+  background:url("../image/batik.png");
+  font:12px Verdana, Arial, Helvetica, sans-serif;
+}
+#wrap{
+  width:950px;
+  margin:0 auto;
+  background:#fff;
+}
+
+#header{
+  padding: 5px 10px;
+  background-image: url('../image/batik1.png');
+}
+
+#nav{
+  padding:5px 10px;
+  background:#cc7;
+}
+
+#footer {
+  padding:5px 10px;
+  background:#cc7;
+}
+
+#footer p {
+  margin:0;
+  text-align: left;
+}
+#header h1{
+  font-size:20px;
+  color:red;
+}
+
+#header h2{
+  font-size:15px;
+  color:darkorange;
+}
+#log{
+  padding:15px 10px;
+  background:transparent;
+  float: right;
+}
+#main {
+  text-align: center;
+  width:950px;
+  margin: auto;
+}
+.clearfix {
+  overflow: auto;
+}
