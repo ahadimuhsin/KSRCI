@@ -59,6 +59,7 @@ class ksr_model extends CI_Model
             'tanggal_acara' => $this->input->post('tanggal'),
             'tempat_acara' => $this->input->post('tempat'),
             'kontak' => $this->input->post('telepon'),
+            'status_surat'=>"Menunggu Konfirmasi",  //status default
             'url_lampiran'=>$upload['file']['file_name']
 
         );

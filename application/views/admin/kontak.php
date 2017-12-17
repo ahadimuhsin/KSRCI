@@ -46,6 +46,7 @@
       <td><?php echo $surat['tempat_acara'];?></td>
       <td><?php echo $surat['url_lampiran'];?></td>
       <td><?php echo $surat['kontak'];?></td>
+      <td><?php echo $surat['status_surat'];?></td>
   </tr> <?php } ?>
 
 </table>
