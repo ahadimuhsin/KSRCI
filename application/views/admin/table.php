@@ -85,7 +85,7 @@
     <div id="footer">
       <div class="clearfix">
       <a href="https://www.instagram.com/ksr_uns/" target="_blank">
-            <img src="<?php echo base_url();?>image/insta.png" style=" float: left;" width="20" height="20"></a>
+            <img src="<?php echo base_url();?>image/insta.png" style=" float: left;" width="20" height="20">
           <p style=" float: left;">&nbspinstagram:ksr_uns&nbsp&nbsp</p></a>
           <a href="https://www.facebook.com/ksr.uns" target="_blank">
           <img src="<?php echo base_url();?>image/fb.png" style=" float: left;" width="20" height="20">

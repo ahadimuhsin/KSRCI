@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="framelayout.css">
+    <link rel="stylesheet" href="layout.css">
     <style>
         #customers {
             font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
