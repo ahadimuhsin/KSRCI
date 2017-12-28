@@ -7,6 +7,18 @@
       <link rel="stylesheet" href="<?php echo base_url()."css/framelayout.css"?>">
   </head>
   <style media="screen">
+      table {
+          font-family: arial, sans-serif;
+          border-collapse: collapse;
+          width: 100%;
+      }
+
+      td, th {
+          border: 1px solid #dddddd;
+          text-align: left;
+          padding: 8px;
+      }
+
   #header h1{
     font-size:20px;
     color:red;
@@ -72,12 +84,14 @@
     </div>
     <div id="footer">
       <div class="clearfix">
-        <img src="<?php echo base_url();?>image/insta.png" style=" float: left;" width="20" height="20">
-        <p style=" float: left;">&nbspinstagram:ksr_uns&nbsp&nbsp</p>
-        <img src="<?php echo base_url();?>image/fb.png" style=" float: left;" width="20" height="20">
-        <p style=" float: left;">&nbspfacebook:Ksr Uns&nbsp&nbsp&nbsp</p>
-        <img src="<?php echo base_url();?>image/twitter.png" style=" float: left;" width="20" height="20">
-        <p style=" float: left;">&nbsptwitter:@ksr_uns</p>
+      <a href="https://www.instagram.com/ksr_uns/" target="_blank">
+            <img src="<?php echo base_url();?>image/insta.png" style=" float: left;" width="20" height="20"></a>
+          <p style=" float: left;">&nbspinstagram:ksr_uns&nbsp&nbsp</p></a>
+          <a href="https://www.facebook.com/ksr.uns" target="_blank">
+          <img src="<?php echo base_url();?>image/fb.png" style=" float: left;" width="20" height="20">
+              <p style=" float: left;">&nbspfacebook:Ksr Uns&nbsp&nbsp&nbsp</p></a>
+        <a href="https://twitter.com/ksr_uns" target="_blank"> <img src="<?php echo base_url();?>image/twitter.png" style=" float: left;" width="20" height="20">
+        <p style=" float: left;">&nbsptwitter:@ksr_uns</p></a>
       </div>
     </div>
     </div>
