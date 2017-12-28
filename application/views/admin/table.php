@@ -43,8 +43,8 @@
     <div id="nav"></div>
     <div id="main">
 
-      <iframe width="800" height="auto" frameborder="0" name="frmMain"
-      scrolling="auto" src="<?php echo base_url()."index.php/admin/isitabel"?>"> </iframe>
+      <iframe width="600" height="600" frameborder="10" name="frmMain"
+       src="<?php echo base_url()."index.php/admin/isitabel"?>"> </iframe>
     </div>
     <div id="footer">
       <div class="clearfix">

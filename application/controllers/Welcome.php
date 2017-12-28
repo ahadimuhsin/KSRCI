@@ -32,6 +32,8 @@ class Welcome extends CI_Controller
         $this->load->view('admin/login');
     }
 
+
+
     public function tambah(){
         $data = array();
 
@@ -86,6 +88,9 @@ class Welcome extends CI_Controller
         $this->session->sess_destroy();
         redirect(base_url("index.php/welcome/index"));
     }
+
+
+
 
 
 

@@ -41,6 +41,23 @@ class Admin extends CI_Controller
 
     }
 
+    public function editt($no_surat)
+    {
+        $this->load->model('ksr_model');
+        $surat = $this->ksr_model->GetWhere('surat', array('no_surat'=>$no_surat));
+        $data = array(
+            'no_surat'=>$surat[0]['no_surat'],
+            'instansi'=>$surat[0]['instansi'],
+            'nama_acara'=>$surat[0]['acara'],
+            'tanggal_acara'=>$surat[0]['tanggal'],
+            'tempat_acara'=>$surat[0]['tempat'],
+            'kontak'=>$surat[0]['telepon'],
+            'status_surat'=>$surat[0]['status_surat']
+        );
+        $this->load->view('admin/editStatus', $data);
+    }
+
+
 
 
 }

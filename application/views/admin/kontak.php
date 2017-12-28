@@ -47,6 +47,8 @@
       <td><?php echo $surat['url_lampiran'];?></td>
       <td><?php echo $surat['kontak'];?></td>
       <td><?php echo $surat['status_surat'];?></td>
+      <td><a href="<?php echo base_url()."index.php/admin/editt/"
+              .$surat['no_surat'];?>">Edit</td>
   </tr> <?php } ?>
 
 </table>
