@@ -26,27 +26,27 @@
 </head>
 <body>
 <br>
-<form target="frmMain" action="<?php echo base_url()."";?>" method="post"
+<form  action="<?php echo base_url()."index.php/admin/update_data";?>" method="post"
       enctype="multipart/form-data">
     <strong>No Surat:</strong>
     <input type="text" name="no_surat" size="45" value="<?php echo $no_surat;?>" readonly><br><br>
     <strong>Nama Instansi:</strong>
     <input type="text" name="instansi" size="45"  value="<?php echo $instansi;?>" readonly><br><br>
     <strong>Nama Acara:</strong>
-    <input type="text" name="acara" size="45" value="<?php echo $acara;?>" readonly> <br><br>
+    <input type="text" name="nama_acara" size="45" value="<?php echo $nama_acara;?>" readonly> <br><br>
     <strong>Tanggal:</strong>
-    <input type="date" name="tanggal" size="45" value="<?php echo $tanggal;?>" readonly><br><br>
+    <input type="date" name="tanggal_acara" size="45" value="<?php echo $tanggal_acara;?>" readonly><br><br>
     <strong>Tempat:</strong>
-    <input type="text" name="tempat" size="45" value="<?php echo $tempat;?>" readonly><br><br>
+    <input type="text" name="tempat_acara" size="45" value="<?php echo $tempat_acara;?>" readonly><br><br>
     <strong>Nomor Telpon :</strong>
-    <input type="text" name="telepon" size="45" value="<?php echo $kontak;?>" readonly><br><br>
+    <input type="text" name="kontak" size="45" value="<?php echo $kontak;?>" readonly><br><br>
     <strong>Status:</strong>
     <div>
         <input type="radio" id="status1" name="status_surat"
-               value="diterima">
+               value="Diterima">
         <label for="status1">Diterima</label>
         <input type="radio" id="status2" name="status_surat"
-               value="ditolak">
+               value="Ditolak">
         <label for="status2">Ditolak</label>
     </div>
     <input type="submit" name="userSubmit" value="Submit">

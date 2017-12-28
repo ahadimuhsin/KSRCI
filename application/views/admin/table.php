@@ -43,8 +43,32 @@
     <div id="nav"></div>
     <div id="main">
 
-      <iframe width="600" height="600" frameborder="10" name="frmMain"
-       src="<?php echo base_url()."index.php/admin/isitabel"?>"> </iframe>
+        <table id="customers">
+            <tr>
+                <th>No.Surat</th>
+                <th>Nama Instansi</th>
+                <th>Nama Acara</th>
+                <th>Tanggal</th>
+                <th>Tempat</th>
+                <th>Lampiran</th>
+                <th>Kontak</th>
+                <th>Status</th>
+            </tr>
+            <?php foreach ($data as $surat) {?>
+                <tr>
+                    <td><?php echo $surat['no_surat'];?></td>
+                    <td><?php echo $surat['instansi'];?></td>
+                    <td><?php echo $surat['nama_acara'];?></td>
+                    <td><?php echo $surat['tanggal_acara'];?></td>
+                    <td><?php echo $surat['tempat_acara'];?></td>
+                    <td><?php echo $surat['url_lampiran'];?></td>
+                    <td><?php echo $surat['kontak'];?></td>
+                    <td><?php echo $surat['status_surat'];?></td>
+                    <td><a href="<?php echo base_url()."index.php/admin/editt/"
+                            .$surat['no_surat'];?>">Edit</td>
+                </tr> <?php } ?>
+
+        </table>
     </div>
     <div id="footer">
       <div class="clearfix">

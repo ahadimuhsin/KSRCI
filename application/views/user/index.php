@@ -21,7 +21,7 @@
       </div>
     <div id="nav"></div>
     <div id="main" style="background: #fff">
-        <form target="frmMain" action="<?php echo base_url()."index.php/welcome/tambah";?>" method="post"
+        <form action="<?php echo base_url()."index.php/welcome/tambah";?>" method="post"
               enctype="multipart/form-data">
             <strong>No Surat:</strong>
             <input type="text" name="no_surat" size="45" placeholder="Masukkan Nomor Surat" required><br><br>

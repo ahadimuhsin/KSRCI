@@ -29,7 +29,9 @@ class Admin extends CI_Controller
 
     public function tabel()
     {
-        $this->load->view('admin/table');
+        $data = $this->ksr_model->GetSurat('surat');
+        $data = array ('data'=> $data);
+        $this->load->view('admin/table',$data);
     }
 
     public function isitabel()
@@ -48,15 +50,42 @@ class Admin extends CI_Controller
         $data = array(
             'no_surat'=>$surat[0]['no_surat'],
             'instansi'=>$surat[0]['instansi'],
-            'nama_acara'=>$surat[0]['acara'],
-            'tanggal_acara'=>$surat[0]['tanggal'],
-            'tempat_acara'=>$surat[0]['tempat'],
-            'kontak'=>$surat[0]['telepon'],
+            'nama_acara'=>$surat[0]['nama_acara'],
+            'tanggal_acara'=>$surat[0]['tanggal_acara'],
+            'tempat_acara'=>$surat[0]['tempat_acara'],
+            'kontak'=>$surat[0]['kontak'],
             'status_surat'=>$surat[0]['status_surat']
         );
         $this->load->view('admin/editStatus', $data);
     }
+    public function update_data()
+    {
+        $no_surat=$_POST['no_surat'];
+        $instansi=$_POST['instansi'];
+        $nama_acara=$_POST['nama_acara'];
+        $tanggal_acara=$_POST['tanggal_acara'];
+        $tempat_acara=$_POST['tempat_acara'];
+        $kontak=$_POST['kontak'];
+        $status_surat=$_POST['status_surat'];
+        $data=array(
+            'no_surat'=>$no_surat,
+            'instansi'=>$instansi,
+            'nama_acara'=>$nama_acara,
+            'tanggal_acara'=>$tanggal_acara,
+            'tempat_acara'=>$tempat_acara,
+            'kontak'=>$kontak,
+            'status_surat'=>$status_surat
+        );
+        $where = array(
+            'no_surat' =>$no_surat,
+        );
+        $this->load->model('ksr_model');
+        $res=$this->ksr_model->Update('surat', $data, $where);
+        if ($res>0){
 
+            redirect('index.php/admin/tabel', 'refresh');
+        }
+    }
 
 
 
