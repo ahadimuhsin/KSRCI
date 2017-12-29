@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <title>KSR</title>
     <link rel="stylesheet" href="<?php echo base_url()."css/layout.css"?>" type="text/css">
-      <link rel="stylesheet" href="<?php echo base_url()."css/framelayout.css"?>">
   </head>
   <style media="screen">
       table {
@@ -19,14 +18,14 @@
           padding: 8px;
       }
 
-  #header h1{
-    font-size:20px;
-    color:red;
-  }
-  #header h2{
-    font-size:15px;
-    color:red;
-  }
+  /*#header h1{*/
+    /*font-size:20px;*/
+    /*color:red;*/
+  /*}*/
+  /*#header h2{*/
+    /*font-size:15px;*/
+    /*color:orange;*/
+  /*}*/
   #log{
     padding:15px 10px;
     background:transparent;
@@ -45,7 +44,7 @@
     <div id="wrap">
       <div id="nav"></div>
       <div id="log">
-        <a href="<?php echo base_url()."/index.php/welcome/logout"?>"><h3><input type="submit" value="Logout"></h3></a>
+        <a href="<?php echo base_url()."/index.php/welcome/logout"?>"><h3><img width="50" height="50" alt="Ikon Logout" src="<?php echo base_url();?>image/logout.png" value="Logout"></h3></a>
       </div>
       <div id="header">
         <img src="<?php echo base_url();?>image/logo-ksr.png" width="120" height="110">

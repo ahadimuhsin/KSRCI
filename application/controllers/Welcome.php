@@ -74,6 +74,7 @@ class Welcome extends CI_Controller
                 'status'=>"login"
             );
             $this->session->set_userdata($data_session);
+
             redirect(base_url("index.php/admin/tabel"));
         } else{ //kalau salah, muncul peringatan
             echo"
@@ -87,7 +88,7 @@ class Welcome extends CI_Controller
     function logout()
     {
         $this->session->sess_destroy();
-        redirect(base_url("index.php/welcome/index"));
+        redirect(base_url("index.php"));
     }
 
 

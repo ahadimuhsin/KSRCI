@@ -42,17 +42,26 @@
       </div>
     <div id="nav"></div>
     <div id="main">
-
+<!--        <br><br><br><br><br><br><br><br><br>-->
         <form target="frmMain" action="<?php echo base_url()."index.php/welcome/aksi_login"?>" method="post">
             <br>
-            <strong>Username :</strong>
+<!--            <strong>Username :</strong>-->
+<!--            <input type="text" name="username" size="45"> <br> <br>-->
+<!--            <strong>Password :</strong>-->
+<!--            <input type="password" name="password" size="45">-->
+<!--      <input type="submit" value="Login"></h3></a>-->
+<!--            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>-->
+        <br><br><br><br><br><br><br><br><br>
+            <form target="frmMain" action="<?php echo base_url()."index.php/welcome/aksi_login"?>" method="post">
+                <br>
+            <strong>Username:</strong>
             <input type="text" name="username" size="45"> <br> <br>
-            <strong>Password :</strong>
-            <input type="password" name="password" size="45">
-
-      <input type="submit" value="Login"></h3></a>
-      <iframe width="690" height="330" frameborder="0"
-      scrolling="auto"></iframe>
+            <strong>Password:</strong>
+            <input type="password" name="password" size="45"> <br> <br>
+            <input type="image" width="70" height="40" src="<?php echo base_url();?>image/loginbutton.png" value="Login"> <br> <br>
+            <br><br><br><br><br><br><br><br>
+<!--      <iframe width="690" height="330" frameborder="0"-->
+<!--      scrolling="auto"></iframe>-->
         </form>
     </div>
     <div id="footer">
