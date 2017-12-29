@@ -17,7 +17,8 @@ class Admin extends CI_Controller
         $this->load->model('ksr_model');
         $this->load->helper('file');
         $this->load->library('session');
-
+        $this->load->helper('download');
+        //apabila ada user yang langung masuk ke halaman admin, akan dicek statusnya terlebih dahulu
         if ($this->session->userdata('status') != "login") {
             echo "
            <script>alert('Anda Belum Login!')</script>";
@@ -26,6 +27,8 @@ class Admin extends CI_Controller
     }
 
 
+    //function tabel meload tabel surat kemudian membuat array isinya menjadi variabel $data
+    //variabel $data ditampilkan pada halaman table
 
     public function tabel()
     {
@@ -43,7 +46,7 @@ class Admin extends CI_Controller
 
     }
 
-    public function editt($no_surat)
+    public function editt($no_surat) //untuk menampilkan data berdasarkan nomor surat
     {
         $this->load->model('ksr_model');
         $surat = $this->ksr_model->GetWhere('surat', array('no_surat'=>$no_surat));
@@ -58,7 +61,7 @@ class Admin extends CI_Controller
         );
         $this->load->view('admin/editStatus', $data);
     }
-    public function update_data()
+    public function update_data() //untuk mengupdate data
     {
         $no_surat=$_POST['no_surat'];
         $instansi=$_POST['instansi'];
@@ -87,6 +90,21 @@ class Admin extends CI_Controller
         }
     }
 
-
+    //untuk mendownload file dari folder uploads
+    public function download($fileName = NULL) {
+        if ($fileName) {
+            $file = realpath ( "uploads" ) . "\\" . $fileName;
+            // check file exists
+            if (file_exists ( $file )) {
+                // get file content
+                $data = file_get_contents ( $file );
+                //force download
+                force_download ( $fileName, $data );
+            } else {
+                // Redirect to base url
+                redirect ( base_url () );
+            }
+        }
+    }
 
 }

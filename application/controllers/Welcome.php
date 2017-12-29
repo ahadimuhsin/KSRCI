@@ -38,12 +38,13 @@ class Welcome extends CI_Controller
         $data = array();
 
         if($this->input->post('userSubmit')){ // Jika user menekan tombol Submit (Simpan) pada form
-            // lakukan upload file dengan memanggil function upload yang ada di GambarModel.php
+            // lakukan upload file dengan memanggil function upload yang ada di ksr_model.php
             $upload = $this->ksr_model->upload();
 
             if($upload['result'] == "success"){ // Jika proses upload sukses
                 // Panggil function save yang ada di ksr_model.php untuk menyimpan data ke database
                 $this->ksr_model->save($upload);
+                echo "<script> alert ('Data Berhasil Ditambahkan');</script>";
 
                 redirect(base_url(),'refresh'); // Redirect kembali ke halaman awal / halaman view data
             }else{ // Jika proses upload gagal

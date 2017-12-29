@@ -73,7 +73,7 @@
                     <td><?php echo $surat['nama_acara'];?></td>
                     <td><?php echo $surat['tanggal_acara'];?></td>
                     <td><?php echo $surat['tempat_acara'];?></td>
-                    <td><?php echo $surat['url_lampiran'];?></td>
+                    <td><a href="<?php echo base_url()."./uploads/".$surat['url_lampiran'];?>"><?php echo $surat['url_lampiran'];?></td>
                     <td><?php echo $surat['kontak'];?></td>
                     <td><?php echo $surat['status_surat'];?></td>
                     <td><a href="<?php echo base_url()."index.php/admin/editt/"

@@ -67,7 +67,7 @@ class ksr_model extends CI_Model
         $this->db->insert('surat', $data);
     }
 
-    function cek_login($table,$where)
+    function cek_login($table,$where) //untuk mengecek login
     {
         return $this->db->get_where($table,$where);
     }
