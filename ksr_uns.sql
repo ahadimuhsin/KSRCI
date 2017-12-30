@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 17, 2017 at 03:22 PM
+-- Generation Time: Dec 30, 2017 at 03:56 AM
 -- Server version: 10.1.22-MariaDB
 -- PHP Version: 7.1.4
 
@@ -55,9 +55,6 @@ CREATE TABLE `surat` (
   `tempat_acara` varchar(150) NOT NULL,
   `url_lampiran` varchar(100) NOT NULL,
   `kontak` varchar(15) NOT NULL,
-  `belum_dikonfirmasi` tinyint(1) DEFAULT NULL,
-  `diterima` tinyint(1) DEFAULT NULL,
-  `ditolak` tinyint(1) DEFAULT NULL,
   `status_surat` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -65,9 +62,12 @@ CREATE TABLE `surat` (
 -- Dumping data for table `surat`
 --
 
-INSERT INTO `surat` (`id_surat`, `no_surat`, `instansi`, `nama_acara`, `tanggal_acara`, `tempat_acara`, `url_lampiran`, `kontak`, `belum_dikonfirmasi`, `diterima`, `ditolak`, `status_surat`) VALUES
-(10, '23', 'Himaster', 'Networking', '2017-12-05', 'Tawangmangu', 'ATM_M0515040.pdf', '23242412341', NULL, NULL, NULL, NULL),
-(11, '2323', 'ewrwer', '23232', '2017-11-28', 'wqeweq', 'Student-Connect_w_ur_Class.docx', '23232', NULL, NULL, NULL, 'Menunggu Konfirmasi');
+INSERT INTO `surat` (`id_surat`, `no_surat`, `instansi`, `nama_acara`, `tanggal_acara`, `tempat_acara`, `url_lampiran`, `kontak`, `status_surat`) VALUES
+(10, '23', 'Himaster', 'Networking', '2017-12-05', 'Tawangmangu', 'ATM_M0515040.pdf', '23242412341', 'Diterima'),
+(11, '2323', 'ewrwer', '23232', '2017-11-28', 'wqeweq', 'Student-Connect_w_ur_Class.docx', '23232', 'Diterima'),
+(12, '123', 'Himaster', 'Rabes', '2017-12-04', 'B407', 'Screenshot.docx', '233232', 'Diterima'),
+(13, 'e23', 'e2e', '35435', '2017-12-11', 'g4t33', 'FORM-TA_11-PRESENSI-MENGIKUTI-SEMINAR-HASIL-TUGAS-AKHIR.docx', '64y54', 'Diterima'),
+(14, '34242', 'trg3rt', '4t3', '2017-12-07', 'gege', 'FORM-TA_10_KARTU-MENGIKUTI-SEMINAR-HASIL-TUGAS-AKHIR1.doc', '3grq3q4', 'Menunggu Konfirmasi');
 
 --
 -- Indexes for dumped tables
@@ -93,7 +93,7 @@ ALTER TABLE `surat`
 -- AUTO_INCREMENT for table `surat`
 --
 ALTER TABLE `surat`
-  MODIFY `id_surat` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;COMMIT;
+  MODIFY `id_surat` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

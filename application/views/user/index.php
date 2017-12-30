@@ -6,38 +6,74 @@
     <link rel="stylesheet" href="<?php echo base_url()."css/layout.css"?>" type="text/css">
   </head>
   <style>
+      body {margin:0;}
 
+      .topnav {
+          overflow: hidden;
+          background-color: #333;
+      }
+
+      .topnav a {
+          float: left;
+          display: block;
+          color: #f2f2f2;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+          font-size: 17px;
+      }
+
+      .topnav a:hover {
+          background-color: #ddd;
+          color: black;
+      }
+
+      .active {
+          background-color: #4CAF50;
+          color: white;
+      }
+
+      .topnav .icon {
+          display: none;
+      }
+
+      @media screen and (max-width: 600px) {
+          .topnav a:not(:first-child) {display: none;}
+          .topnav a.icon {
+              float: right;
+              display: block;
+          }
+      }
+
+      @media screen and (max-width: 600px) {
+          .topnav.responsive {position: relative;}
+          .topnav.responsive .icon {
+              position: absolute;
+              right: 0;
+              top: 0;
+          }
+          .topnav.responsive a {
+              float: none;
+              display: block;
+              text-align: left;
+          }
+
+      }
   </style>
   <body>
     <div id="wrap">
       <div id="nav"></div>
       <div id="log">
-      <a href="<?php echo base_url()."index.php/welcome/loginpage"?>"><h3><img width="50" height="50" src="image/login.png" alt="Ikon Login" value="Login"></h3></a>
+      <a href="<?php echo base_url()."index.php/welcome/loginpage"?>"><h3><img width="50" height="50" src="<?php echo base_url()."image/login.png"?>" alt="Ikon Login" value="Login"></h3></a>
       </div>
       <div id="header">
         <img src="<?php echo base_url();?>image/logo-ksr.png" width="120" height="110">
         <h1>KSR PMI UNIT UNS</h1><h2>Mengabdi dengan Ikhlas, Berkarya Sepenuh Hati</h2>
       </div>
-    <div id="nav"></div>
-<!--    <div id="main" style="background: #fff">-->
-<!--        <form action="--><?php //echo base_url()."index.php/welcome/tambah";?><!--" method="post"-->
-<!--              enctype="multipart/form-data">-->
-<!--            <strong>No Surat:</strong>-->
-<!--            <input type="text" name="no_surat" size="45" placeholder="Masukkan Nomor Surat" required><br><br>-->
-<!--            <strong>Nama Instansi:</strong>-->
-<!--            <input type="text" name="instansi" size="45" placeholder="Masukkan Nama Instansi" required><br><br>-->
-<!--            <strong>Nama Acara:</strong>-->
-<!--            <input type="text" name="acara" size="45" placeholder="Masukkan Nama Acara" required> <br><br>-->
-<!--            <strong>Tanggal:</strong>-->
-<!--            <input type="date" name="tanggal" size="45" placeholder="Format dd/mm/yyyy" required><br><br>-->
-<!--            <strong>Tempat:</strong>-->
-<!--            <input type="text" name="tempat" size="45" placeholder="Masukkan Nama Tempat" required><br><br>-->
-<!--            <strong>Nomor Telpon :</strong>-->
-<!--            <input type="text" name="telepon" size="45" placeholder="Masukkan Nomor Telepon yang Dapat Dihubungi" required><br><br>-->
-<!--            <input type="file" name="file" value="Upload File" required> <br> <br>-->
-<!--            <input type="submit" name="userSubmit" value="Submit">-->
-<!--        </form>-->
-<!--    </div>-->
+    <div class="topnav" id="nav">
+        <a href="#" class="active">Home</a>
+        <a href="<?php echo base_url()."index.php/welcome/lihatSurat"?>">Lihat Surat</a>
+    </div>
         <div class="konten">
             <div class="artikel">
                 <form action="<?php echo base_url()."index.php/welcome/tambah";?>" method="post"

@@ -92,7 +92,12 @@ class Welcome extends CI_Controller
     }
 
 
-
+    function lihatSurat()
+    {
+        $data = $this->ksr_model->GetSurat('surat');
+        $data = array ('data'=> $data);
+        $this->load->view('user/searchSurat',$data);
+    }
 
 
 

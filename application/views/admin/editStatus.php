@@ -7,9 +7,6 @@
     .clearfix {
         overflow: auto;
     }
-    .footer {
-        padding:5px 10px;
-    }
 </style>
 <body>
 <div class="konten">
@@ -44,9 +41,9 @@
                 <label for="kontak">No Telpon</label>
                 <input type="password" name="kontak" value="<?php echo $kontak;?>" readonly>
             </div>
-            <div class="footer">
+            <div class="aaa">
                 <div class="clearfix">
-                    <strong>Status</strong>
+                    <label for="status">Status</label>&nbsp &nbsp
                     <input type="radio" name="status_surat" value="Diterima"> Diterima &nbsp &nbsp
                     <input type="radio" name="status_surat" value="Ditolak"> Ditolak
                 </div>

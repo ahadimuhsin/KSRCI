@@ -14,7 +14,7 @@ body{
 
 #header{
   padding: 5px 10px;
-  background-image: url('../image/batik.png');
+  background:url("../image/batik.png");
 }
 
 #nav{
