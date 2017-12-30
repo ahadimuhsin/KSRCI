@@ -76,6 +76,7 @@
     </div>
         <div class="konten">
             <div class="artikel">
+                <h1 align="center">Form Permohonan Bantuan KSR Unit UNS</h1>
                 <form action="<?php echo base_url()."index.php/welcome/tambah";?>" method="post"
                       enctype="multipart/form-data">
                     <div class="grup">
@@ -105,7 +106,7 @@
                     <div class="grup">
                         <br>
                         <label for="file">Dokumen</label>
-                        <input type="file" name="file" value="Upload File" required>
+                        <input type="file" accept=".doc, .docx, .pdf, .jpg, .jpeg, .png" name="file" value="Upload File" required>
                         <br>
                         <input type="submit" name="userSubmit" value="Submit">
                         <br>

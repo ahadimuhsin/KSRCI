@@ -50,8 +50,9 @@
         <img src="<?php echo base_url();?>image/logo-ksr.png" width="120" height="110">
         <h1>KSR PMI UNIT UNS</h1><h2>Mengabdi dengan Ikhlas, Berkarya Sepenuh Hati</h2>
       </div>
-        <h4 align="left">Hai, <?php echo $this->session->userdata('user_name');?></h4>
-    <div id="nav"></div>
+    <div id="nav">
+        <h4 align="left" >&nbsp Hai, <?php echo $this->session->userdata('user_name');?></h4>
+    </div>
     <div id="main">
 
         <table id="customers">
